@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMEN</title>
+    <style>
+      body {
+        font-family: Candara, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ff4655;
+        color: #ffffff;
+      }
+      header {
+        background-color: #7f232a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      nav {
+        display: flex;
+      }
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .photo-container {
+        position: relative;
+        margin: 20px 0;
+        text-align: center;
+      }
+      .photo-container img {
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+      }
+      .photo-container .character-name {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px 10px;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      .character-info {
+        background-color: #7f232a;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+      }
+      .character-info h2 {
+        margin: 0 0 10px 0;
+      }
+      .character-info p {
+        margin: 0;
+      }
+      .abilities-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .abilities-container .ability {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+      .abilities-container img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+      .rating-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .rating-container img {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+      }
+      .rating-container .rating {
+        font-size: 36px;
+        text-align: right;
+        margin-right: 20px;
+      }
+      .rating-container .role {
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      .frames-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .frame {
+        border: 2px solid #ffffff;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .frame-labels {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .content-section,
+      .gallery-section {
+        background-color: #7f232a;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 20px;
+      }
+      .content-section h2,
+      .gallery-section h2 {
+        margin: 0;
+      }
+      .abilities-video-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        align-items: flex-start;
+      }
+      .abilities-block,
+      .video-block {
+        flex: 1;
+        text-align: center;
+      }
+      .video-wrapper {
+        text-align: center;
+      }
+      .abilities-title {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+      .ability-description {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+    <script>
+      function changeVideo(src, title, description) {
+        const video = document.getElementById("ability-video");
+        video.src = src;
+
+        video.play();
+        document.getElementById("ability-title").innerText = title;
+        document.getElementById("ability-description").innerText = description;
+      }
+
+      window.onload = function () {
+        changeVideo(
+          "/img/abomen1.mp4",
+          "PARANOIA",
+          "INSTANTLY fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls."
+        );
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Valorant Fan Site</h1>
+      <nav>
+        <a href="/index.html">About game</a>
+        <a href="/agent.html">Agents</a>
+        <a href="/weapons.html">Arsenal</a>
+        <a href="/maps.html">Maps</a>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="photo-container">
+        <img src="/img/omen_page.png" alt="Agent Photo" />
+        <div class="character-name">OMEN</div>
+      </div>
+      <div class="character-info">
+        <h2>Agent Information</h2>
+        <p>
+          A phantom of a memory, Omen hunts in the shadows. He renders enemies
+          blind, teleports across the field, then lets paranoia take hold as his
+          foe scrambles to learn where he might strike next.
+        </p>
+      </div>
+      <div class="rating-container">
+        <div class="rating">
+          <div class="role">ROLE</div>
+          <div class="role">CONTROLLER</div>
+        </div>
+        <img src="/img/controller-icon.png" alt="Agent Icon" />
+      </div>
+      <div class="abilities-video-container">
+        <div class="abilities-block">
+          <div class="abilities-title"><b>SPECIAL ABILITIES</b></div>
+          <div class="abilities-container">
+            <div
+              class="ability"
+              onclick="changeVideo('/img/abomen1.mp4', 'PARANOIA', 'INSTANTLY fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls.')"
+            >
+              <img src="/img/om1.webp" alt="Ability 1" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/abomen2.mp4', 'DARK COVER', 'EQUIP a shadow orb, entering a phased world to place and target the orbs. PRESS the ability key to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. HOLD FIRE while targeting to move the marker further away. HOLD ALT FIRE while targeting to move the marker closer. PRESS RELOAD to toggle normal targeting view.')"
+            >
+              <img src="/img/om2.webp" alt="Ability 2" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/abomen3.mp4', 'SHROUDED STEP', 'EQUIP a shadow walk ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location.')"
+            >
+              <img src="/img/om3.webp" alt="Ability 3" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/ab_omen4.mp4', 'FROM THE SHADOWS', 'EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.')"
+            >
+              <img src="/img/om4.webp" alt="Ability 4" />
+            </div>
+          </div>
+          <div class="ability-description">
+            <h2 id="ability-title">PARANOIA</h2>
+            <p id="ability-description">
+              INSTANTLY fire a shadow projectile forward, briefly reducing the
+              vision range of all players it touches. This projectile can pass
+              straight through walls.
+            </p>
+          </div>
+        </div>
+        <div class="video-block">
+          <div class="video-wrapper">
+            <video
+              id="ability-video"
+              width="80%"
+              height="70%"
+              autoplay
+              muted
+              loop
+            >
+              <source src="/img/abomen1.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

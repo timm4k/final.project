@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps</title>
+    <style>
+      body {
+        font-family: Candara, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ff4655;
+        color: #ffffff;
+      }
+
+      header {
+        background-color: #7f232a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      nav {
+        display: flex;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .map-section {
+        margin-bottom: 40px;
+      }
+
+      .main-photo-container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .main-photo-container img {
+        width: 90%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+
+      .frames-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .frame {
+        border: 2px solid #ffffff;
+        width: calc(16.66% - 10px);
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .content-section,
+      .gallery-section {
+        background-color: #7f232a;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+        margin: 20px 10px;
+      }
+
+      .content-section h2,
+      .gallery-section h2 {
+        margin: 0;
+      }
+    </style>
+    <script>
+      function changeMainPhoto(mapId, src) {
+        document.getElementById(`main-photo-${mapId}`).src = src;
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Valorant Fan Site</h1>
+      <nav>
+        <a href="/index.html">About game</a>
+        <a href="/agent.html">Agents</a>
+        <a href="/weapons.html">Arsenal</a>
+        <a href="/maps.html">Maps</a>
+      </nav>
+    </header>
+    <div class="content">
+      <h1>Maps</h1>
+
+      <div class="map-section">
+        <h2>SUNSET</h2>
+        <p>
+          A disaster at a local kingdom facility threatens to engulf the whole
+          neighborhood. Stop at your favorite food truck then fight across the
+          city in this traditional three lane map.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-1"
+            src="img/SUNSET1.webp"
+            alt="Main Map Photo 1"
+          />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(1, '/img/SUNSET1.webp')">
+            <img src="img/SUNSET1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(1, '/img/SUNSET2.webp')">
+            <img src="img/SUNSET2.webp" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(1, '/img/SUNSET3.webp')">
+            <img src="img/SUNSET3.webp" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(1, '/img/SUNSET4.webp')">
+            <img src="img/SUNSET4.webp" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(1, '/img/SUNSET5.webp')">
+            <img src="img/SUNSET5.webp" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(1, '/img/SUNSET6.webp')">
+            <img src="img/SUNSET6.webp" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>LOTUS</h2>
+        <p>
+          A mysterious structure housing an astral conduit radiates with ancient
+          power. Great stone doors provide a variety of movement opportunities
+          and unlock the paths to three mysterious sites.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-2"
+            src="/img/LOTUS1.webp"
+            alt="Main Map Photo 2"
+          />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/LOTUS1.webp')">
+            <img src="/img/LOTUS1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(2, 'img/LOTUS2.webp')">
+            <img src="img/LOTUS2.webp" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(2, '/img/LOTUS3.jpg')">
+            <img src="/img/LOTUS3.jpg" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(2, '/img/LOTUS4.webp')">
+            <img src="/img/LOTUS4.webp" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(2, '/img/LOTUS5.webp')">
+            <img src="/img/LOTUS5.webp" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(2, '/img/LOTUS6.png')">
+            <img src="/img/LOTUS6.png" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>PEARL</h2>
+        <p>
+          Attackers push down into the Defenders on this two-site map set in a
+          vibrant, underwater city. Pearl is a geo-driven map with no mechanics.
+          Take the fight through a compact mid or the longer range wings in our
+          first map set in Omega Earth.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-3"
+            src="/img/PEARL1.webp"
+            alt="Main Map Photo 3"
+          />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/PEARL1.webp')">
+            <img src="/img/PEARL1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(3, '/img/PEARL2.png')">
+            <img src="/img/PEARL2.png" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(3, '/img/PEARL3.webp')">
+            <img src="/img/PEARL3.webp" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(3, '/img/PEARL4.jpg')">
+            <img src="/img/PEARL4.jpg" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(3, '/img/PEARL5.webp')">
+            <img src="/img/PEARL5.webp" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(3, '/img/PEARL6.jpg')">
+            <img src="/img/PEARL6.jpg" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>FRACTURE</h2>
+        <p>
+          A top secret research facility split apart by a failed radianite
+          experiment. With defender options as divided as the map, the choice is
+          yours: meet the attackers on their own turf or batten down the hatches
+          to weather the assault.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-4"
+            src="/img/FRACTURE1.webp"
+            alt="Main Map Photo 4"
+          />
+        </div>
+        <div class="frames-container">
+          <div
+            class="frame"
+            onclick="changeMainPhoto(2, '/img/FRACTURE1.webp')"
+          >
+            <img src="/img/FRACTURE1.webp" alt="Photo 0" />
+          </div>
+          <div
+            class="frame"
+            onclick="changeMainPhoto(4, '/img/FRACTURE2.webp')"
+          >
+            <img src="/img/FRACTURE2.webp" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(4, '/img/FRACTURE3.jpg')">
+            <img src="/img/FRACTURE3.jpg" alt="Photo 2" />
+          </div>
+          <div
+            class="frame"
+            onclick="changeMainPhoto(4, '/img/FRACTURE4.webp')"
+          >
+            <img src="/img/FRACTURE4.webp" alt="Photo 3" />
+          </div>
+          <div
+            class="frame"
+            onclick="changeMainPhoto(4, '/img/FRACTURE5.webp')"
+          >
+            <img src="/img/FRACTURE5.webp" alt="Photo 4" />
+          </div>
+          <div
+            class="frame"
+            onclick="changeMainPhoto(4, '/img/FRACTURE6.webp')"
+          >
+            <img src="/img/FRACTURE6.webp" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>BREEZE</h2>
+        <p>
+          Take in the sights of historic ruins or seaside caves on this tropical
+          paradise. But bring some cover. You'll need them for the wide open
+          spaces and long range engagements. Watch your flanks and this will be
+          a Breeze.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-5"
+            src="/img/BREEZE1.webp"
+            alt="Main Map Photo 5"
+          />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/BREEZE1.webp')">
+            <img src="/img/BREEZE1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(5, '/img/BREEZE2.png')">
+            <img src="/img/BREEZE2.png" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(5, '/img/BREEZE3.webp')">
+            <img src="/img/BREEZE3.webp" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(5, '/img/BREEZE4.webp')">
+            <img src="/img/BREEZE4.webp" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(5, '/img/BREEZE5.webp')">
+            <img src="/img/BREEZE5.webp" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(5, '/img/BREEZE6.jpg')">
+            <img src="/img/BREEZE6.jpg" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>ICEBOX</h2>
+        <p>
+          Your next battleground is a secret Kingdom excavation site overtaken
+          by the arctic. The two plant sites protected by snow and metal require
+          some horizontal finesse. Take advantage of the ziplines and they’ll
+          never see you coming.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-6"
+            src="/img/ICEBOX1.webp"
+            alt="Main Map Photo 6"
+          />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/ICEBOX1.webp')">
+            <img src="/img/ICEBOX1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(6, '/img/ICEBOX2.webp')">
+            <img src="/img/ICEBOX2.webp" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(6, '/img/ICEBOX3.webp')">
+            <img src="/img/ICEBOX3.webp" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(6, '/img/ICEBOX4.jpg')">
+            <img src="/img/ICEBOX4.jpg" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(6, '/img/ICEBOX5.jpg')">
+            <img src="/img/ICEBOX5.jpg" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(6, '/img/ICEBOX6.webp')">
+            <img src="/img/ICEBOX6.webp" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>BIND</h2>
+        <p>
+          Two sites. No middle. Gotta pick left or right. What’s it going to be
+          then? Both offer direct paths for attackers and a pair of one-way
+          teleporters make it easier to flank.
+        </p>
+        <div class="main-photo-container">
+          <img id="main-photo-7" src="/img/BIND1.webp" alt="Main Map Photo 7" />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/BIND1.webp')">
+            <img src="/img/BIND1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(7, '/img/BIND2.png')">
+            <img src="/img/BIND2.png" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(7, '/img/BIND3.avif')">
+            <img src="/img/BIND3.avif" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(7, '/img/BIND4.jpg')">
+            <img src="/img/BIND4.jpg" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(7, '/img/BIND5.jpg')">
+            <img src="/img/BIND5.jpg" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(7, '/img/BIND6.png')">
+            <img src="/img/BIND6.png" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>HAVEN</h2>
+        <p>
+          Beneath a forgotten monastery, a clamour emerges from rival Agents
+          clashing to control three sites. There’s more territory to control,
+          but defenders can use the extra real estate for aggressive pushes.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-8"
+            src="/img/HAVEN1.webp"
+            alt="Main Map Photo 8"
+          />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/HAVEN1.webp')">
+            <img src="/img/HAVEN1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(8, '/img/HAVEN2.webp')">
+            <img src="/img/HAVEN2.webp" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(8, '/img/HAVEN3.jpg')">
+            <img src="/img/HAVEN3.jpg" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(8, '/img/HAVEN4.jpeg')">
+            <img src="/img/HAVEN4.jpeg" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(8, '/img/HAVEN5.jpg')">
+            <img src="/img/HAVEN5.jpg" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(8, '/img/HAVEN6.jpg')">
+            <img src="/img/HAVEN6.jpg" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>SPLIT</h2>
+        <p>
+          If you want to go far, you’ll have to go up. A pair of sites split by
+          an elevated center allows for rapid movement using two rope ascenders.
+          Each site is built with a looming tower vital for control. Remember to
+          watch above before it all blows sky-high.
+        </p>
+        <div class="main-photo-container">
+          <img id="main-photo-9" src="/img/SPLIT1.jpg" alt="Main Map Photo 9" />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/SPLIT1.jpg')">
+            <img src="/img/SPLIT1.jpg" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(9, '/img/SPLIT2.webp')">
+            <img src="/img/SPLIT2.webp" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(9, '/img/SPLIT3.png')">
+            <img src="/img/SPLIT3.png" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(9, '/img/SPLIT4.jpg')">
+            <img src="/img/SPLIT4.jpg" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(9, '/img/SPLIT5.webp')">
+            <img src="/img/SPLIT5.webp" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(9, '/img/SPLIT6.jpg')">
+            <img src="/img/SPLIT6.jpg" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>ASCENT</h2>
+        <p>
+          An open playground for small wars of position and attrition divide two
+          sites on Ascent. Each site can be fortified by irreversible bomb
+          doors; once they’re down, you’ll have to destroy them or find another
+          way. Yield as little territory as possible.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-10"
+            src="/img/ASCENT1.webp"
+            alt="Main Map Photo 10"
+          />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/ASCENT1.webp')">
+            <img src="/img/ASCENT1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(10, '/img/ASCENT2.png')">
+            <img src="/img/ASCENT2.png" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(10, '/img/ASCENT3.jpg')">
+            <img src="/img/ASCENT3.jpg" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(10, '/img/ASCENT4.png')">
+            <img src="/img/ASCENT4.png" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(10, '/img/ASCENT5.webp')">
+            <img src="/img/ASCENT5.webp" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(10, '/img/ASCENT6.webp')">
+            <img src="/img/ASCENT6.webp" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>ABYSS</h2>
+        <p>
+          Full of dizzying dangers, treacherous traps (tread carefully) and
+          vertical gameplay. Abyss is the first VALORANT map that has no
+          borders. The object on the map is the secret fortress of the Children
+          of the Hourglass.
+        </p>
+        <div class="main-photo-container">
+          <img
+            id="main-photo-11"
+            src="/img/ABYSS1.webp"
+            alt="Main Map Photo 11"
+          />
+        </div>
+        <div class="frames-container">
+          <div class="frame" onclick="changeMainPhoto(2, '/img/ABYSS1.webp')">
+            <img src="/img/ABYSS1.webp" alt="Photo 0" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(11, '/img/ABYSS2.webp')">
+            <img src="/img/ABYSS2.webp" alt="Photo 1" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(11, '/img/ABYSS3.jpg')">
+            <img src="/img/ABYSS3.jpg" alt="Photo 2" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(11, '/img/ABYSS4.webp')">
+            <img src="/img/ABYSS4.webp" alt="Photo 3" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(11, '/img/ABYSS5.jpg')">
+            <img src="/img/ABYSS5.jpg" alt="Photo 4" />
+          </div>
+          <div class="frame" onclick="changeMainPhoto(11, '/img/ABYSS6.jpg')">
+            <img src="/img/ABYSS6.jpg" alt="Photo 5" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

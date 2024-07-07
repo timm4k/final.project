@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKYE</title>
+    <style>
+      body {
+        font-family: Candara, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ff4655;
+        color: #ffffff;
+      }
+      header {
+        background-color: #7f232a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      nav {
+        display: flex;
+      }
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .photo-container {
+        position: relative;
+        margin: 20px 0;
+        text-align: center;
+      }
+      .photo-container img {
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+      }
+      .photo-container .character-name {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px 10px;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      .character-info {
+        background-color: #7f232a;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+      }
+      .character-info h2 {
+        margin: 0 0 10px 0;
+      }
+      .character-info p {
+        margin: 0;
+      }
+      .abilities-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .abilities-container .ability {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+      .abilities-container img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+      .rating-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .rating-container img {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+      }
+      .rating-container .rating {
+        font-size: 36px;
+        text-align: right;
+        margin-right: 20px;
+      }
+      .rating-container .role {
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      .frames-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .frame {
+        border: 2px solid #ffffff;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .frame-labels {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .content-section,
+      .gallery-section {
+        background-color: #7f232a;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 20px;
+      }
+      .content-section h2,
+      .gallery-section h2 {
+        margin: 0;
+      }
+      .abilities-video-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        align-items: flex-start;
+      }
+      .abilities-block,
+      .video-block {
+        flex: 1;
+        text-align: center;
+      }
+      .video-wrapper {
+        text-align: center;
+      }
+      .abilities-title {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+      .ability-description {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+    <script>
+      function changeVideo(src, title, description) {
+        const video = document.getElementById("ability-video");
+        video.src = src;
+        video.play();
+
+        document.getElementById("ability-title").innerText = title;
+        document.getElementById("ability-description").innerText = description;
+      }
+
+      window.onload = function () {
+        changeVideo(
+          "/img/skye1.mp4",
+          "REGROWTH",
+          "EQUIP a healing trinket. HOLD FIRE to channel, healing allies in range and line of sight. Can be reused until her healing pool is depleted. Skye cannot heal herself."
+        );
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Valorant Fan Site</h1>
+      <nav>
+        <a href="/index.html">About game</a>
+        <a href="/agent.html">Agents</a>
+        <a href="/weapons.html">Arsenal</a>
+        <a href="/maps.html">Maps</a>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="photo-container">
+        <img src="/img/skye_page.png" alt="Agent Photo" />
+        <div class="character-name">SKYE</div>
+      </div>
+      <div class="character-info">
+        <h2>Agent Information</h2>
+        <p>
+          Hailing from Australia, Skye and her band of beasts trail-blaze the
+          way through hostile territory. With her creations hampering the enemy,
+          and her power to heal others, the team is strongest and safest by
+          Skye’s side.
+        </p>
+      </div>
+      <div class="rating-container">
+        <div class="rating">
+          <div class="role">ROLE</div>
+          <div class="role">INITIATOR</div>
+        </div>
+        <img src="/img/INITIATOR.png" alt="Agent Icon" />
+      </div>
+      <div class="abilities-video-container">
+        <div class="abilities-block">
+          <div class="abilities-title"><b>SPECIAL ABILITIES</b></div>
+          <div class="abilities-container">
+            <div
+              class="ability"
+              onclick="changeVideo('/img/skye1.mp4', 'REGROWTH', 'EQUIP a healing trinket. HOLD FIRE to channel, healing allies in range and line of sight. Can be reused until her healing pool is depleted. Skye cannot heal herself.')"
+            >
+              <img src="/img/skye1.webp" alt="Ability 1" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/skye2.mp4', 'GUIDING LIGHT', 'EQUIP a hawk trinket. FIRE to send it forward. HOLD FIRE to guide the hawk in the direction of your crosshair. RE-USE while the hawk is in flight to transform it into a flash that plays a hit confirm if an enemy was within range and line of sight.')"
+            >
+              <img src="/img/skye2.webp" alt="Ability 2" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/skye3.mp4', 'TRAILBLAZER', 'EQUIP a Tasmanian tiger trinket. FIRE to send out and take control of the predator. While in control, FIRE to leap forward, exploding in a concussive blast and damaging directly hit enemies.')"
+            >
+              <img src="/img/skye3.webp" alt="Ability 3" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/skye4.mp4', 'SEEKERS', 'EQUIP a Seeker trinket. FIRE to send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it Nearsights them. Enemies can destroy the Seekers.')"
+            >
+              <img src="/img/skye4.webp" alt="Ability 4" />
+            </div>
+          </div>
+          <div class="ability-description">
+            <h2 id="ability-title">REGROWTH</h2>
+            <p id="ability-description">
+              EEQUIP a healing trinket. HOLD FIRE to channel, healing allies in
+              range and line of sight. Can be reused until her healing pool is
+              depleted. Skye cannot heal herself.
+            </p>
+          </div>
+        </div>
+        <div class="video-block">
+          <div class="video-wrapper">
+            <video
+              id="ability-video"
+              width="80%"
+              height="70%"
+              autoplay
+              muted
+              loop
+            >
+              <source src="/img/skye1.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

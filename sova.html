@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOVA</title>
+    <style>
+      body {
+        font-family: Candara, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ff4655;
+        color: #ffffff;
+      }
+      header {
+        background-color: #7f232a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      nav {
+        display: flex;
+      }
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .photo-container {
+        position: relative;
+        margin: 20px 0;
+        text-align: center;
+      }
+      .photo-container img {
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+      }
+      .photo-container .character-name {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px 10px;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      .character-info {
+        background-color: #7f232a;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+      }
+      .character-info h2 {
+        margin: 0 0 10px 0;
+      }
+      .character-info p {
+        margin: 0;
+      }
+      .abilities-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .abilities-container .ability {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+      .abilities-container img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+      .rating-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .rating-container img {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+      }
+      .rating-container .rating {
+        font-size: 36px;
+        text-align: right;
+        margin-right: 20px;
+      }
+      .rating-container .role {
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      .frames-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .frame {
+        border: 2px solid #ffffff;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .frame-labels {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .content-section,
+      .gallery-section {
+        background-color: #7f232a;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 20px;
+      }
+      .content-section h2,
+      .gallery-section h2 {
+        margin: 0;
+      }
+      .abilities-video-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        align-items: flex-start;
+      }
+      .abilities-block,
+      .video-block {
+        flex: 1;
+        text-align: center;
+      }
+      .video-wrapper {
+        text-align: center;
+      }
+      .abilities-title {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+      .ability-description {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+    <script>
+      function changeVideo(src, title, description) {
+        const video = document.getElementById("ability-video");
+        video.src = src;
+        video.play();
+
+        document.getElementById("ability-title").innerText = title;
+        document.getElementById("ability-description").innerText = description;
+      }
+
+      window.onload = function () {
+        changeVideo(
+          "/img/sova1.mp4",
+          "SHOCK BOLT",
+          "EQUIP a bow with a shock bolt. FIRE to send the explosive bolt forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALT FIRE to add up to two bounces to this arrow."
+        );
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Valorant Fan Site</h1>
+      <nav>
+        <a href="/index.html">About game</a>
+        <a href="/agent.html">Agents</a>
+        <a href="/weapons.html">Arsenal</a>
+        <a href="/maps.html">Maps</a>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="photo-container">
+        <img src="/img/sova_page.png" alt="Agent Photo" />
+        <div class="character-name">SOVA</div>
+      </div>
+      <div class="character-info">
+        <h2>Agent Information</h2>
+        <p>
+          Born from the eternal winter of Russia's tundra, Sova tracks, finds,
+          and eliminates enemies with ruthless efficiency and precision. His
+          custom bow and incredible scouting abilities ensure that even if you
+          run, you cannot hide.
+        </p>
+      </div>
+      <div class="rating-container">
+        <div class="rating">
+          <div class="role">ROLE</div>
+          <div class="role">INITIATOR</div>
+        </div>
+        <img src="/img/INITIATOR.png" alt="Agent Icon" />
+      </div>
+      <div class="abilities-video-container">
+        <div class="abilities-block">
+          <div class="abilities-title"><b>SPECIAL ABILITIES</b></div>
+          <div class="abilities-container">
+            <div
+              class="ability"
+              onclick="changeVideo('/img/sova1.mp4', 'SHOCK BOLT', 'EQUIP a bow with a shock bolt. FIRE to send the explosive bolt forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALT FIRE to add up to two bounces to this arrow.')"
+            >
+              <img src="/img/sova1.webp" alt="Ability 1" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/sova2.mp4', 'RECON BOLT', 'EQUIP a bow with recon bolt. FIRE to send the recon bolt forward, activating upon collision and Revealing the location of nearby enemies caught in the line of sight of the bolt. Enemies can destroy this bolt. HOLD FIRE to extend the range of the projectile. ALT FIRE to add up to two bounces to this arrow.')"
+            >
+              <img src="/img/sova2.webp" alt="Ability 2" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/sova3.mp4', 'OWL DRONE', 'EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will Reveal the location of any player struck by the dart. Enemies can destroy the Owl Drone.')"
+            >
+              <img src="/img/sova3.webp" alt="Ability 3" />
+            </div>
+            <div
+              class="ability"
+              onclick="changeVideo('/img/sova4.mp4', 'HUNTERS FURY', 'EQUIP a bow with three long-range wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active.')"
+            >
+              <img src="/img/sova4.webp" alt="Ability 4" />
+            </div>
+          </div>
+          <div class="ability-description">
+            <h2 id="ability-title">SHOCK BOLT</h2>
+            <p id="ability-description">
+              EQUIP a bow with a shock bolt. FIRE to send the explosive bolt
+              forward, detonating upon collision and damaging players nearby.
+              HOLD FIRE to extend the range of the projectile. ALT FIRE to add
+              up to two bounces to this arrow.
+            </p>
+          </div>
+        </div>
+        <div class="video-block">
+          <div class="video-wrapper">
+            <video
+              id="ability-video"
+              width="80%"
+              height="70%"
+              autoplay
+              muted
+              loop
+            >
+              <source src="/img/sova1.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

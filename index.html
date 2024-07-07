@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant Fan Site</title>
+    <style>
+      body {
+        font-family: Candara, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ff4655;
+        color: #ffffff;
+      }
+      header {
+        background-color: #7f232a;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      nav {
+        display: flex;
+      }
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .video-container {
+        position: relative;
+        margin: 20px 0;
+      }
+      .video-container video {
+        width: 100%;
+        pointer-events: none;
+      }
+      .text-above-button {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+      }
+      .download-button {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff4655;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .download-button:hover {
+        background-color: #d7323e;
+      }
+      .photo-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+      }
+      .photo-container .right,
+      .photo-container .left {
+        width: 48%;
+      }
+      .photo-container img {
+        width: 100%;
+      }
+      .left .video-wrapper {
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 24px;
+      }
+      .frames-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .frame {
+        border: 2px solid #ffffff;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .frame-labels {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .content-section,
+      .gallery-section {
+        background-color: #7f232a;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 20px;
+      }
+      .content-section h2,
+      .gallery-section h2 {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Valorant Fan Site</h1>
+      <nav>
+        <a href="/index.html">About game</a>
+        <a href="/agent.html">Agents</a>
+        <a href="/weapons.html">Arsenal</a>
+        <a href="/maps.html">Maps</a>
+      </nav>
+    </header>
+    <div class="content">
+      <section class="video-container">
+        <h2>Official trailer</h2>
+        <video width="100%" autoplay muted loop>
+          <source src="/img/vidindex.mp4" type="video/mp4" />
+        </video>
+        <div class="text-above-button">
+          A 5v5 character-based tactical shooter
+        </div>
+        <a
+          href="https://playvalorant.com/en-us/download/"
+          class="download-button"
+          >DOWNLOAD GAME</a
+        >
+      </section>
+      <section class="gallery-section">
+        <h2>Gallery</h2>
+      </section>
+      <section class="photo-container">
+        <div class="left">
+          <div class="video-wrapper">
+            <video width="80%" height="70%" autoplay muted loop>
+              <source
+                src="/img/video_2024-06-26_13-51-08.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <p>
+            Game also requires players not only to be able to shoot, but also to
+            work in a team, coordinate actions, and make quick and correct
+            decisions. Valorant is a real challenge for those who love
+            adrenaline and competition, but are ready to improve their skills
+            and develop strategic thinking.
+          </p>
+          <p>
+            The definitive fan site resource for Riot Games' competitive 5v5
+            character-based tactical shooter, VALORANT, that was released on
+            June 2nd, 2020. Set in a near-future Earth, you team up with 4 other
+            players against 5 enemies in round-based combat with an agent of
+            your choice. Creativity is your greatest weapon.
+          </p>
+          <p></p>
+        </div>
+        <div class="right">
+          <p>
+            <i>Valorant</i> - is an online shooter from Riot Games that combines
+            elements of strategy, speed, and accuracy. The game differs from
+            other shooters with its unique system of heroes, each of which has
+            its own unique skills and abilities.
+          </p>
+          <p>
+            Players have to choose the hero that best suits their playstyle and
+            strategy. Each round in Valorant is a real battle of wits and
+            reactions, where every move can decide the fate of the team. By
+            playing Valorant, players can develop their skills, improve their
+            strategy, and communicate with other players from around the world.
+          </p>
+          <img src="/img/agent-map-e1712153973303.jpeg" alt="Valorant Image" />
+        </div>
+      </section>
+      <section class="content-section">
+        <h2>Content</h2>
+      </section>
+      <section class="frames-container">
+        <div class="frame">
+          <a href="/agent.html">
+            <img
+              src="/img/a6ca137c031e56a80c52d7007406e959fcd11fb9-1920x1080.jpg"
+              alt="Agents"
+            />
+          </a>
+        </div>
+        <div class="frame">
+          <a href="/weapons.html">
+            <img src="/img/Weapons.webp" alt="Weapons" />
+          </a>
+        </div>
+        <div class="frame">
+          <a href="/maps.html">
+            <img src="/img/Maps.webp" alt="Maps" />
+          </a>
+        </div>
+      </section>
+      <section class="frame-labels">
+        <div>Agents</div>
+        <div>Weapons</div>
+        <div>Maps</div>
+      </section>
+    </div>
+  </body>
+</html>
